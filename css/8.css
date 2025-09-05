@@ -1,0 +1,84 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #a8160e;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #000000;
+}
+
+
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    align-items: center;
+    background-color: #a8160e;
+    padding: 50px;
+    height: 100vh;
+    color: white;
+}
+
+
+.image-container {
+    max-width: 100%;  
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img {
+    width: 100%; 
+    max-width: 500px; 
+    height: auto;
+}
+
+/* Text Container (Texto a la derecha) */
+.text-container {
+    max-width: 100%;  /* El texto ocupa toda la columna */
+    padding-left: 50px;  /* Espacio entre el texto y la imagen */
+}
+
+.text-container h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+
+.text-container p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Botón */
+.btn {
+    text-decoration: none;
+    padding: 12px 30px;
+    background-color: #F7C831;
+    color: #000;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+.btn:hover {
+    background-color: #FFB104;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .hero-section {
+        grid-template-columns: 1fr;  /* Las columnas se apilan en pantallas pequeñas */
+        text-align: center;  /* Centra el texto */
+    }
+
+    .image-container img {
+        max-width: 90%;  /* Ajusta la imagen en pantallas pequeñas */
+    }
+
+    .text-container {
+        padding-left: 0;
+        padding-top: 20px;  /* Espacio arriba en dispositivos móviles */
+    }
+}

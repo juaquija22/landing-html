@@ -1,0 +1,136 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Logo */
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+}
+
+/* Product Section */
+.product-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Columna izquierda */
+.product-info {
+    max-width: 45%;
+}
+
+.product-info h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.product-info p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+
+
+.btn {
+    text-decoration: none;
+    padding: 12px 24px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.order {
+    background-color: #000;
+    color: #fff;
+}
+
+.explore {
+    background-color: #fff;
+    border: 2px solid #000;
+    color: #000;
+}
+
+.order:hover {
+    background-color: #000000;
+}
+
+.explore:hover {
+    background-color: #f0f0f0;
+}
+
+/* Cuadro con iconos debajo de la información */
+.icon-box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    background-color: #fff;
+    border-color: #000;
+    border-bottom: #000 solid 2px ;
+   
+}
+
+.icon-item {
+    text-align: center;
+    width: 22%;
+}
+
+.icon-item .icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.icon-item p {
+    font-size: 0.9em;
+    color: #000000;
+}
+
+/* Características del producto */
+.product-features {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.feature-item {
+    text-align: center;
+}
+
+.feature-item img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Columna derecha */
+.product-image {
+    max-width: 45%;
+    position: relative;
+}
+
+.eWatch {
+    max-width: 100%;
+    border-radius: 15px;
+}

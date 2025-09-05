@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    text-align: left;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3.5em;
+    color: #000000;
+    margin-bottom: 60px;
+    line-height: 1.2;
+    max-width: 700px;
+}
+
+.cards-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card-item {
+    flex: 1;
+    min-width: 250px;
+    max-width: calc(25% - 22.5px); /* Adjusted for gap */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-item .number {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #797979;
+    margin-bottom: 10px;
+}
+
+.card-item p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.image-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 300px; /* Fixed height for image cards */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0; /* Fallback background */
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the area, cropping if necessary */
+    display: block;
+}
+
+.image-card .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.image-card .overlay .title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.image-card .overlay .description {
+    font-size: 0.8em;
+    line-height: 1.4;
+}
+
