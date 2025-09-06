@@ -1,0 +1,169 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo general */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f0f0; /* fondo exterior */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 40px;
+}
+
+/* Contenedor principal centrado como una tarjeta */
+.section {
+  display: flex;
+  width:98%;
+  height:98% ;
+  overflow: hidden;
+  background-color: white;
+ 
+}
+
+/* ===================== LEFT SIDE ===================== */
+.left {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url('/image/3e9726e3-b22b-49c6-914d-61c2c14d3941.png'), url('/image/image bg (2).png');
+  background-position: top left, center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 150px, cover;
+}
+
+.lamp-img {
+  display: none; /* ya está como fondo */
+}
+
+.overlay {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 3;
+  color: white;
+  padding: 0 20px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  max-width: 350px;
+  color: white;
+}
+
+.cta-button {
+  background: white;
+  color: black;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #eaeaea;
+}
+
+/* ===================== RIGHT SIDE ===================== */
+.right {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #1a7b82; /* fallback */
+}
+
+.right .content {
+  position: relative;
+  z-index: 3;
+  max-width: 500px;
+  padding: 40px;
+}
+
+/* Fondo azul degradado */
+.right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/image/image bg (1).png');
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+/* Textura de ruido */
+.right::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/image/noise.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+  z-index: 2;
+}
+
+/* Letra "D" gigante */
+.right .content::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 200px;
+  width: 400px;
+  height: 400px;
+  background-image: url('/image/D.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.15;
+  z-index: 1;
+}
+
+/* ===================== TEXT ===================== */
+.title {
+  font-size: 32px;
+  margin-bottom: 40px;
+  z-index: 3;
+  position: relative;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  z-index: 3;
+  position: relative;
+}
+
+.feature h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.feature p {
+  font-size: 14px;
+  line-height: 1.4;
+}

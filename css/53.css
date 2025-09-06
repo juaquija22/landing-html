@@ -1,0 +1,134 @@
+/* Estilos generales para todo el sitio */
+body {
+  margin: 0; /* Elimina espacios blancos alrededor de la página */
+  font-family: "Georgia", serif; /* Cambia el tipo de letra a Georgia */
+  background-color: #ffffff; /* Pone un fondo gris clarito */
+}
+
+.container {
+  display: grid; /* Organiza el contenido en una cuadrícula (como una tabla invisible) */
+  grid-template-columns: 1fr 1fr; /* Divide el espacio en 2 columnas iguales */
+  gap: 40px; /* Deja un espacio de 40px entre las columnas */
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  padding: 60px 80px; /* Deja espacio interior (arriba/abajo 60px, lados 80px) */
+  position: relative; /* Permite posicionar cosas dentro de él de forma precisa */
+  background-color: #fff; /* Fondo blanco para el contenido principal */
+}
+
+.left-column {
+  position: relative; /* Permite colocar cosas (como imágenes decorativas) encima */
+  margin-left:200px; /* Aumenta este número para mover más a la derecha */
+  
+  
+}
+
+.title {
+  font-weight: 400; /* 👈 Esto quita la negrita */
+  font-size: 70px; /* Tamaño de letra muy grande para el título */
+  margin-bottom: 40px; /* Deja espacio debajo del título */
+  line-height: 1.2; /* Altura de línea para que no se vean muy pegadas */
+  color: #3a3a3a; /* Color gris oscuro para el texto */
+  max-width: 350px; /* El título no será más ancho que 350px */
+}
+
+.circle-decor {
+  position: absolute; /* Coloca la imagen decorativa en un lugar específico */
+  top: 80px; /* Se baja 60px desde arriba */
+  left: 300px; /* Se mueve 280px desde la izquierda */
+  width: 90px; /* Tamaño del círculo */
+  opacity: 0.8; /* Un poco transparente */
+  margin-top:-50px; /* Lo sube 30px para ajustarlo mejor */
+}
+
+.circle-decor img {
+  width: 100px; /* La imagen ocupa todo el espacio del contenedor */
+  height: auto; /* Mantiene proporción para que no se deforme */
+  display: block; /* Quita espacio extra por defecto de las imágenes */
+}
+
+.main-image {
+  width:600px; /* Ocupa todo el ancho disponible */
+  max-width: 400px; /* Pero no será más grande que 400px */
+  border-radius: 12px; /* Bordes redondeados en las esquinas */
+  margin-bottom: 24px; /* Deja espacio debajo de la imagen */
+}
+
+.description {
+  max-width: 400px; /* El texto no será más ancho que 400px */
+  color: #3a3a3a; /* Color gris oscuro */
+  font-size: 20px; /* Tamaño del texto normal */
+  line-height: 1.5; /* Espacio entre líneas para que se lea bien */
+  margin-top:-10px;
+}
+
+.right-column {
+  display: grid; /* Cambiamos de flex a grid para mayor control */
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+  gap: 40px 50px; /* espacio vertical y horizontal */
+  align-items: start; /* Alinear los elementos arriba */
+  margin-left: -90px; /* <-- mueve la columna hacia la izquierda */
+  
+  
+  
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top:60px;
+  
+
+  
+}
+
+.card-title {
+  font-size:20px;
+  font-weight: 400;
+  color: #555;
+ 
+ 
+ 
+}
+
+.card img {
+ width: 400px;
+  height:600px;
+  border-radius: 12px;
+  object-fit: cover; /* recorta para que no se distorsione */
+  
+}
+
+.card-text {
+   display: flex;
+  align-items: flex-start; /* Alinea número y párrafo por arriba */
+  gap: 16px;
+  margin-left:40px ;
+  text-align: center;  /* ✅ Esto centra el texto dentro de los bloques */
+  
+  
+  
+  
+}
+
+.card-number {
+  font-family: Georgia, serif;
+  font-weight: 700; /* más grueso para que se note */
+  font-size: 50px;
+  color: #bbb;
+  min-width: 40px;
+  user-select: none;
+  transform: translateX(-50px); /* Ajusta este valor según lo que desees */
+  
+  
+}
+
+.card-text p {
+  font-size: 20px;
+  color: #555;
+  margin: 0;
+  line-height: 1.6;
+  margin-bottom: 15px; /* Separa el título de la imagen */
+  margin-left:-50px;
+  
+}

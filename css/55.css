@@ -1,0 +1,100 @@
+/* styles.css */
+body {
+  margin: 0;
+  font-family: "Proxima Nova", sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  background: url("/image/Image\ bg.png") no-repeat center center;
+  background-size: cover;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left:250px ;
+ 
+  color: #0c0c0c;
+  
+  margin-top:-50px ;
+  
+}
+
+.title {
+  font-family: "PT Serif", serif;
+  font-size: 80px;
+  margin: 0 0 20px 0;
+  color: #0c0c0c;
+}
+
+.description {
+  font-size: 20px;
+  margin: 0 0 40px 0;
+  max-width: 500px;
+  line-height: 1.4;
+}
+
+.btn {
+  width: 200px;
+  height: 66px;
+  border: none;
+  border-radius: 40px;
+  background-color: #0c0c0c;
+  color: #fff;
+  font-size: 22px;
+  
+  
+}
+
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: end;     
+  gap: 20px;               
+  height: 100%;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 60px 250px; 
+  grid-template-rows: 220px auto;  
+  gap: 12px 20px;
+  align-items: start;
+  margin-right: 200px;
+}
+
+.number {
+  grid-row: 1 / span 2;
+  font-family: 'PT Serif', serif;
+  font-weight: bold;
+  font-size: 28px;
+  color: #E9E9E9;
+  display: flex;
+  align-items: flex-start; 
+  justify-content: center;
+  margin-right:80px;
+  margin-top:30px
+}
+
+.image img {
+  width:350px;
+  object-fit: cover;
+  display: block;
+  margin-top:50px ;
+}
+
+.text p {
+  font-family: 'Proxima Nova', sans-serif;
+  font-size:16px;
+  color: #E9E9E9;
+  margin: 0;
+  line-height: 1.4;
+  margin-top:150px ;
+}

@@ -1,51 +1,80 @@
-.body{
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+/* ------------------ */
+/* Estilo general del cuerpo */
+/* ------------------ */
+body {
+  margin: 0; /* Elimina márgenes por defecto del navegador */
+  padding: 0; /* Elimina relleno por defecto del navegador */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente limpia y moderna */
+  background-color: #f9f9f9; /* Color de fondo claro */
+  color: #000000; /* Color de texto gris oscuro */
 }
 
-h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 34px;
-
+/* ------------------ */
+/* Sección del encabezado principal (hero) */
+/* ------------------ */
+.hero {
+  text-align: center; /* Centra el texto horizontalmente */
+  max-width: 700px; /* Limita el ancho para que no se extienda demasiado */
+  margin: 80px auto 50px; /* Margen superior, centrado horizontal y margen inferior */
+  padding: 0 20px; /* Espacio interno lateral para móviles */
 }
 
-p {
-    color: rgb(36, 36, 36);
+/* Título principal */
+.hero h1 {
+  font-size: 2.5rem; /* Tamaño grande para destacar */
+  font-weight: 700; /* Fuente en negrita */
+  line-height: 1.3; /* Altura entre líneas */
+  margin-bottom: 20px; /* Espacio debajo del título */
 }
 
-.button{
-    border-radius: 8px;
-    background-color: black;
-    color: rgb(172, 172, 172);
-    border: none;
-    padding: 10px 22px;
-    cursor: pointer;
-
+/* Párrafo descriptivo */
+.hero p {
+  font-size: 1rem; /* Tamaño de fuente normal */
+  line-height: 1.6; /* Espaciado entre líneas para legibilidad */
+  margin-bottom: 30px; /* Espacio debajo del párrafo */
+  color: #666; /* Color de texto gris más claro */
 }
 
+/* ------------------ */
+/* Estilo del botón */
+/* ------------------ */
+.hero button {
+  background-color: #333; /* Fondo negro/gris oscuro */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  padding: 12px 24px; /* Espaciado interno horizontal y vertical */
+  border-radius: 10px; /* Bordes redondeados */
+  font-size: 1rem; /* Tamaño de fuente estándar */
+  cursor: pointer; /* Cambia el cursor a "mano" al pasar el ratón */
+  
+}
+
+
+
+/* ------------------ */
+/* Galería de imágenes */
+/* ------------------ */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 10px;
-  padding: 40px;
-  max-width: 700px;
-  margin: 0 auto 80px;
+  display: grid; /* Usa CSS Grid para distribuir las imágenes */
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); /* Crea columnas flexibles de mínimo 160px */
+  gap: 10px; /* Espacio entre las imágenes */
+  max-width: 800px; /* Igual ancho que el texto de arriba para mantener alineación */
+  margin: 0 auto 80px; /* Centrada horizontalmente, con espacio abajo */
+  padding: 0 20px; /* Espacio a los lados para pantallas pequeñas */
+  justify-content: center; /* Centra el contenido si hay menos columnas que espacio disponible */
+}
+
+/* ------------------ */
+/* Estilo de cada imagen dentro de la galería */
+/* ------------------ */
+.image img {
+  display: flex;
+  align-items: center;
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  aspect-ratio: 1/1; /* Mantiene relación 1:1 para que las imágenes sean cuadradas */
+  object-fit: cover; /* Corta la imagen para que llene el espacio sin deformarse */
+  border-radius: 16px; /* Bordes redondeados */
+   display: block; /* Elimina espacios en blanco debajo de las imágenes */
 }
 
 
-.gallery img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: 10px;
-}
-
-.label {
-  position: absolute; /* Posiciona el número de forma absoluta respecto al contenedor */
-  top: -25px; /* Aparece encima de la imagen */
-  left: 0; /* Alineado a la izquierda */
-  font-size: 1.2rem; /* Tamaño del número */
-  font-weight: bold; /* Texto en negrita */
-  color: #aaa; /* Color gris claro */
-}

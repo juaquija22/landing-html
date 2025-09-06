@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  
+  color: #2a2a2a;
+}
+
+.hero {
+  display: flex;
+  padding: 60px 80px;
+  background-color: #fff;
+}
+
+.left {
+  flex: 1;
+  padding-right: 40px;
+  margin-left:70px ;
+}
+
+.right {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-left:200px;
+  margin-top:120px;
+}
+
+.hero-img {
+  width:560px;
+  height: auto;
+  margin-bottom: 24px;
+  margin-top: -90px;
+ margin-left:80px ;
+}
+
+.description {
+  font-size:20px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  color: #444;
+  margin-left:90px ;
+}
+
+.btn {
+  background-color: #000;
+  color: #fff;
+  padding: 19px 50px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left:90px;
+}
+
+.title {
+  position: absolute;
+  top:70px; /* Ajusta según lo alto que lo quieras */
+  left:610px; /* Ajusta según lo alineado que lo quieras */
+  font-size: 70px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #000;
+  z-index: 2; /* Asegura que esté por encima */
+  
+}
+.title .bold {
+  font-weight: 700;
+  color: #000;
+}
+
+.title .outline {
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 1px #000;
+  text-stroke: 1px #000;
+  margin: 0 6px;
+}
+
+
+
+.stats-card {
+  border: 2px solid #aaa;
+  border-radius: 16px;
+  padding: 80px 20px; /* Menos padding vertical */
+  position: relative;
+  background-color: #fff;
+  width: 740px;
+ margin-top: 130px; /* Aumenta este valor para bajarla más */
+ margin-left:-220px;
+}
+
+.circle-decor {
+  position: absolute;
+  top: -60px;              /* Más alto para que se separe de la tarjeta */
+  left: 50%;
+  transform: translateX(-60%);
+  width: 110px;            /* Más grande */
+  height: 110px;
+  z-index: 2;
+  opacity: 0.95;
+}
+
+.circle-decor img {
+  width: 100%;
+  height: auto;
+ 
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  
+}
+
+.stats h2 {
+  font-size: 33px;         /* Un poco más pequeño */
+  font-weight: 700;
+  margin-bottom: 4px;      /* Menos espacio debajo del número */
+}
+
+.stats p {
+  font-size: 20px;
+  color: #666;
+  line-height: 1.2;        /* Más apretado */
+  margin: 0;
+}
+
+.bottom-images {
+  display: flex;
+  gap: 30px;
+  margin-left:-215px ;
+  
+}
+
+.bottom-images img {
+  width:350px;
+  border-radius: 16px;
+}
