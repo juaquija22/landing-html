@@ -1,60 +1,105 @@
-body {
+/* Reset básico: quita márgenes/padding por defecto y define modelo de caja */
+* {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #333;
-  background: #fff;
+  padding: 0;
+  box-sizing: border-box; /* Incluye padding y borde dentro del ancho/alto total */
 }
 
-.feature {
+/* 🌐 Estilos generales del body */
+body {
+  font-family: Avenir, sans-serif; /* Fuente moderna y legible */
+  background: #f2f2f2;             /* Color de fondo gris claro */
+  color: #000;                     /* Texto negro por defecto */
+}
+
+/* 📦 Contenedor principal de la página (dos columnas) */
+section {
+  display: flex;     /* Usa flexbox para dividir en dos columnas: imagen + contenido */
+  width: 100vw;      /* Ocupa todo el ancho de la pantalla */
+  height: 100vh;     /* Ocupa toda la altura de la pantalla */
+}
+
+/* 🖼 Columna izquierda que contiene la imagen */
+.image-side {
+  flex: 1;           /* Ocupa 50% del ancho */
+  height: 100%;      /* Ocupa 100% de la altura del section */
+}
+
+/* 🧩 Imagen: se adapta al contenedor sin deformarse */
+.image-side img {
+  width: 100%;             /* Ocupa todo el ancho disponible */
+  height: 100%;            /* Ocupa todo el alto disponible */
+  object-fit: cover;       /* Cubre el área sin deformarse (puede recortar) */
+  display: block;          /* Elimina espacios debajo de la imagen */
+}
+
+/* 📄 Columna derecha: contiene el texto y bloques numerados */
+.content {
+   flex: 1;
+  background: white;
+  align-items: center; /* Centra horizontalmente todo el contenido */
+
+  
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;                    /* Espacio entre el bloque de texto y los números */
+}
+
+/* 📚 Contenedor del título, párrafo y botón */
+.text-block {
+  display: flex;
+  flex-direction: column;   /* Elementos uno debajo del otro */
+  gap: 20px;                /* Espacio entre ellos */
+}
+
+/* 🏷 Título principal */
+.text-block h1 {
   display: flex;
   align-items: flex-start;
-  max-width: 1100px;
-  margin: 50px auto;
-  gap: 60px;
-  padding: 0 20px;
+  font-size: 60px;          /* Tamaño grande para destacar */
+  font-weight: bold;        /* Negrita */
 }
 
-.feature-image img {
-  width: 500px;
-  border-radius: 4px;
+/* 📝 Texto descriptivo debajo del título */
+.text-block p {
+  font-size: 16px;          /* Tamaño legible */
+  line-height: 1.6;         /* Espaciado entre líneas para mejor lectura */
+  color: #444;              /* Gris medio, no tan fuerte como negro */
 }
 
-.feature-content {
-  max-width: 500px;
+/* 🔘 Botón de llamada a la acción */
+.text-block button {
+  background: #252525;      /* Fondo negro oscuro */
+  color: white;             /* Texto blanco */
+  border: none;             /* Sin borde */
+  padding: 12px 24px;       /* Espaciado interno: vertical y horizontal */
+  font-size: 14px;
+  border-radius: 8px;       /* Bordes redondeados */
+  width: fit-content;       /* Solo ocupa el espacio del texto */
+  cursor: pointer;          /* Cursor de "mano" al pasar por encima */
 }
 
-.feature-content h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
+/* 🔢 Contenedor de los bloques numerados (01, 02, etc.) */
+.number-blocks {
+  display: flex;
+  flex-direction: column;   /* Uno debajo del otro */
+  gap: 30px;                /* Espacio entre cada bloque */
+}
+
+/* 🔳 Estilo del número (01, 02) */
+.number-block h3 {
+  font-size: 24px;          /* Tamaño grande pero menos que el título */
   font-weight: bold;
+  color: #555;              /* Gris oscuro */
+  margin-bottom: 8px;       /* Espacio debajo del número */
 }
 
-.feature-content p {
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-button {
-  background: #222;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-bottom: 30px;
-}
-
-button:hover {
-  background: #000;
-}
-
-.feature-item {
-  margin-bottom: 30px;
-}
-
-.feature-item h3 {
-  font-size: 20px;
-  font-weight: bold;
-  color: #888;
-  margin-bottom: 10px;
+/* 📋 Texto debajo de cada número */
+.number-block p {
+  display: flex;
+  justify-content: flex-start;
+  line-height: 1.5;
+  color: #555;
 }

@@ -1,105 +1,93 @@
 body {
-    background-color: #1e1e1e; /* Color de fondo oscuro */
+    background-color: #1e1e1e;
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
     align-items: center;
-    min-height: 100vh;
-    box-sizing: border-box;
 }
 
-.container {
-    background-color: #1e1e1e; /* Color de fondo del contenedor */
-    max-width: 1400px;
-    width: 100%;
-    display: flex;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.h1{
-    color: rgb(245, 170, 210);
-}
-
-.h2{
-    color: rgb(170, 176, 245);
-}
-.h3{
-    color: rgb(119, 244, 251);
-}
+.h1 { color: rgb(245, 170, 210); }
+.h2 { color: rgb(170, 176, 245); }
+.h3 { color: rgb(119, 244, 251); }
 
 .left-panel {
-    flex: 1;
-    padding: 80px;
+    padding-top: 15%;
+    padding-left: 35%;
     color: #f3f4f6;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
+    align-items: start;
 }
 
 .left-panel h1 {
-    font-size: 4.5rem;
+    font-size: 5.5rem;
     font-weight: bold;
     line-height: 1.1;
-    margin: 0 0 30px 0;
+    margin: 0 0 30px 0;;
 }
-
-.left-panel h1 br {
-    display: none;
-}
-
 
 .left-panel p {
-    font-size: 1rem;
+    font-size: 2rem;
     line-height: 1.6;
     margin-bottom: 40px;
     color: #a0a0a0;
 }
 
+
 .explore-btn {
     background-color: #f3f4f6;
     color: #1e1e1e;
     border: none;
-    padding: 15px 40px;
+    padding: 20px ; 
+    width: 190px;
+    height: 60px; 
     border-radius: 30px;
-    font-size: 1rem;
+    font-size: 16px;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 900;
 }
 
 .right-panel {
-    flex: 1;
-    padding: 20px;
+    padding-right: 15%;
+    padding-top: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr); 
     gap: 15px;
-    width: 100%;
-;
-    
+    width: 80%;
+}
+
+.image-grid img {
+    width: 100%;          /* ocupa todo el ancho de la celda */
+    height: 220px;        /* alto fijo */
+    object-fit: cover;    /* recorta sin deformar */
+    display: block;
+    border-radius: 20px;  /* esquinas redondeadas */
 }
 
 
 
-/* Media Queries para diseño responsivo */
+/* 🔽 Responsivo */
 @media (max-width: 900px) {
-    .container {
-        flex-direction: column;
-        padding: 0;
+    body {
+        grid-template-columns: 1fr; /* pasa a 1 sola columna */
     }
     .left-panel {
         padding: 40px;
         text-align: center;
+        align-items: center;
     }
-    .right-panel {
-        padding: 20px;
+    .explore-btn {
+        align-self: center;
     }
     .image-grid {
         grid-template-columns: repeat(2, 1fr);

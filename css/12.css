@@ -1,0 +1,205 @@
+/* =============================
+   CONTENEDOR GENERAL
+============================= */
+
+.wrapper {
+  max-width: 1300px;
+  margin-top: -150px;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* =============================
+   BODY BASE
+============================= */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  color: #333;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* =============================
+   GRID PRINCIPAL
+============================= */
+
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto auto;
+  gap: 25px;
+  width: 100%;
+  position: relative;
+}
+
+/* =============================
+   BLOQUE DE TEXTO
+============================= */
+
+.text-block {
+  grid-column: 1 / 3;
+  grid-row: 1;
+  margin-top: 120px;
+}
+
+.text-block h1 {
+  font-size: 3.9rem;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  line-height: 1.1;
+}
+
+.text-block p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* =============================
+   BOTÓN
+============================= */
+
+.btn {
+  background-color: #313131;
+  color: #ffffff;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* =============================
+   TESTIMONIO
+============================= */
+
+.testimonial {
+  grid-column: 3 / 5;
+  grid-row: 3 / 4;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: -140px;
+}
+
+.testimonial p {
+  font-size: 1.23rem;
+  line-height: 1.6;
+  margin: 0;
+  color: #555;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+/* =============================
+   IMÁGENES Y ESTILOS INDIVIDUALES
+============================= */
+
+/* Imagen de la silla (abajo izquierda) */
+.image-chair {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  align-self: end;
+  justify-self: start;
+  width: 280px;
+  height: 380px;
+  z-index: 2;
+}
+
+.image-chair img {
+  width: 280px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen estructura (centro) */
+.image-structure {
+    margin-top: 120px;
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
+  align-self: center;
+  justify-self: center;
+  width: 280px;
+  height: 430px;
+  z-index: 1;
+}
+
+.image-structure img {
+  width: 280px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagen escultura azul (derecha arriba) */
+.image-sculpture {
+    margin-top: 120px;
+  grid-column: 4 / 5;
+  grid-row: 1 / 2;
+  align-self: start;
+  justify-self: end;
+  width: 280px;
+  height: 380px;
+}
+
+.image-sculpture img {
+  width: 280px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* =============================
+   ELEMENTOS DECORATIVOS (TOP LAYER)
+============================= */
+
+.deco-waves,
+.deco-star-1,
+.deco-star-2,
+.deco-spring {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Ajustes individuales de decoraciones */
+.deco-waves {
+  top: 140px;
+  left: 31%;
+  height: 90px;
+  width: 310px;
+}
+
+.deco-spring {
+  top: 650px;
+  left: 5%;
+  width: 130px;
+}
+
+.deco-star-1 {
+  top: 43%;
+  left: 41%;
+  width: 230px;
+}
+
+.deco-star-2 {
+  top: 58%;
+  right: 3%;
+  width: 230px;
+}
+

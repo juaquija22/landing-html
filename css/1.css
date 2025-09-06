@@ -74,7 +74,5 @@ body {
   aspect-ratio: 1/1; /* Mantiene relación 1:1 para que las imágenes sean cuadradas */
   object-fit: cover; /* Corta la imagen para que llene el espacio sin deformarse */
   border-radius: 16px; /* Bordes redondeados */
-   display: block; /* Elimina espacios en blanco debajo de las imágenes */
+   display: block; /* Elimina espacios en blanco debajo de las imágenes */
 }
-
-
