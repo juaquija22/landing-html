@@ -16,12 +16,13 @@ body {
 }
 
 .main-title {
-    font-size: 4em; 
+    font-size: clamp(2rem, 6vw, 4em); /* Escalable */
     font-weight: bold;
     color: #222;
     margin-bottom: 60px;
     line-height: 1.1;
     letter-spacing: -1px;
+    text-align: center; /* centrado para móviles */
 }
 
 .projects-grid {
@@ -55,4 +56,40 @@ body {
     display: block; 
     border-radius: 8px; 
     object-fit: cover;
+}
+
+/* Responsividad */
+@media (max-width: 992px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+        gap: 20px;
+    }
+
+    .main-title {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding-top: 40px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr; /* 1 columna en móviles */
+        gap: 15px;
+    }
+
+    .main-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .project-number {
+        font-size: 1.2em;
+    }
+
+    .project-description {
+        font-size: 0.95em;
+    }
 }
