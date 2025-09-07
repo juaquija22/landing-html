@@ -11,6 +11,7 @@ body {
 }
 
 .container {
+    margin-top: -190px;
     width: 90%;
     max-width: 1200px;
     text-align: left;
@@ -44,13 +45,13 @@ h1 {
 .card-item .number {
     font-size: 1.8em;
     font-weight: bold;
-    color: #797979;
+    color: #595959;
     margin-bottom: 10px;
 }
 
 .card-item p {
     font-size: 0.9em;
-    color: #666;
+    color: #000000;
     margin-bottom: 20px;
     line-height: 1.5;
 }
@@ -80,7 +81,7 @@ h1 {
     left: 0;
     right: 0;
     background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 20px;
     box-sizing: border-box;
     text-align: left;
