@@ -1,0 +1,195 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: url("/image/unsplash_3Om4DHcaAc0.png") no-repeat center center fixed;
+  background-size: cover; /* Hace que la imagen cubra todo */
+  min-height: 100vh;      /* Que ocupe al menos toda la pantalla */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+/* Sección principal */
+.design-section {
+  padding: 60px 40px;
+  border-radius: 12px;
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Encabezado */
+.header h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #222;
+  line-height: 1.4;
+}
+
+.header p {
+  font-size: 16px;
+  color: #444;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+}
+
+.header button {
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.header button:hover {
+  background-color: #444;
+}
+
+/* Grid de tarjetas */
+.grid {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 80px);
+  gap: 20px;
+
+  grid-template-areas: 
+    "card1 card2 card3 card4"
+    "card5 card5 card3 card6"
+    "card5 card5 card3 card6";
+}
+.card1 { grid-area: card1; }
+.card2 { grid-area: card2; }
+.card3 { grid-area: card3; }
+.card4 { grid-area: card4; }
+.card5 { grid-area: card5; }
+.card6 { grid-area: card6; }
+
+/* Estilo general para tarjetas */
+.card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Texto sobre imágenes */
+.card p {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  font-size: 14px;
+  color: #fff;
+  z-index: 1; /* para quedar encima del degradado */
+}
+
+/* Tarjeta más alta */
+.card.large {
+  grid-row: span 2;
+}
+
+/* Tarjeta más ancha */
+.card.wide {
+  grid-column: span 2;
+}
+.card.large1 {
+  grid-row: span 2;   /* ocupa 2 filas de alto */
+}
+
+.card.wide1 {
+  grid-column: span 2 ; /* ocupa 2 columnas de ancho */
+}
+
+/* Título superpuesto */
+.card-title {
+  position: absolute;
+  top: 16px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #353535af;
+  padding: 2px 9px;
+  border-radius: 6px;
+  z-index: 1;
+}
+
+.title1{
+    margin-left:162px ;
+}
+
+/* --------------------- */
+/* Degradados por tarjeta */
+/* --------------------- */
+
+.card1::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 40%;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.7), transparent);
+  pointer-events: none;
+}
+
+.card2::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 60%;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.7), transparent);
+  pointer-events: none;
+}
+
+.card3::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 80%;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.4), transparent);
+  pointer-events: none;
+}
+
+.card4::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.4), transparent);
+  pointer-events: none;
+}
+
+.card5::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 100%;
+ 
+  pointer-events: none;
+}
+
+.card6::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 70%;
+ 
+  pointer-events: none;
+}

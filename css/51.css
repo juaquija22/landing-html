@@ -5,10 +5,9 @@
   box-sizing: border-box;
 }
 
-/* Fondo general */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f0f0f0; /* fondo exterior */
+  background-color: #f0f0f0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,14 +15,12 @@ body {
   padding: 40px;
 }
 
-/* Contenedor principal centrado como una tarjeta */
 .section {
   display: flex;
-  width:98%;
-  height:98% ;
+  width: 98%;
+  height: 98%;
   overflow: hidden;
   background-color: white;
- 
 }
 
 /* ===================== LEFT SIDE ===================== */
@@ -42,25 +39,27 @@ body {
 }
 
 .lamp-img {
-  display: none; /* ya está como fondo */
+  display: none;
 }
 
 .overlay {
   position: absolute;
-  bottom: 60px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 150px;
+  left: 0;
+  right: 0;
   text-align: center;
   z-index: 3;
   color: white;
-  padding: 0 20px;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .description {
-  font-size: 16px;
+  font-size: 29px;
   line-height: 1.5;
   margin-bottom: 20px;
-  max-width: 350px;
   color: white;
 }
 
@@ -68,15 +67,10 @@ body {
   background: white;
   color: black;
   border: none;
-  padding: 12px 24px;
-  font-size: 16px;
+  padding: 15px 40px;
+  font-size: 18px;
   border-radius: 30px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.cta-button:hover {
-  background: #eaeaea;
+  margin-top: 20px;
 }
 
 /* ===================== RIGHT SIDE ===================== */
@@ -85,20 +79,19 @@ body {
   position: relative;
   overflow: hidden;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   color: white;
-  background-color: #1a7b82; /* fallback */
+  padding: 60px; /* Alinea mejor el contenido */
 }
 
 .right .content {
   position: relative;
   z-index: 3;
   max-width: 500px;
-  padding: 40px;
 }
 
-/* Fondo azul degradado */
+/* Fondo azul */
 .right::before {
   content: "";
   position: absolute;
@@ -112,7 +105,7 @@ body {
   z-index: 1;
 }
 
-/* Textura de ruido */
+/* Textura */
 .right::after {
   content: "";
   position: absolute;
@@ -127,25 +120,26 @@ body {
   z-index: 2;
 }
 
-/* Letra "D" gigante */
-.right .content::before {
+/* Letra "D" */
+.right::before {
   content: "";
   position: absolute;
-  top: 40px;
-  left: 200px;
-  width: 400px;
-  height: 400px;
+  bottom: 0;
+  right: 0;
+  width: 500px;
+  height: 500px;
   background-image: url('/image/D.png');
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.15;
+  opacity: 0.4;
   z-index: 1;
 }
 
 /* ===================== TEXT ===================== */
 .title {
-  font-size: 32px;
+  font-size: 38px;
   margin-bottom: 40px;
+  font-weight: normal;
   z-index: 3;
   position: relative;
 }
@@ -159,11 +153,13 @@ body {
 }
 
 .feature h3 {
-  font-size: 20px;
+  font-size: 24px;
   margin-bottom: 8px;
+  font-weight: normal;
+  opacity: 0.6;
 }
 
 .feature p {
-  font-size: 14px;
-  line-height: 1.4;
+  font-size: 16px;
+  line-height: 1.5;
 }

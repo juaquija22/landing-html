@@ -1,0 +1,103 @@
+/* -------------------------------------
+   Reset básico
+------------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #F8D696, #EABF61);
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: row; /* 💡 Invierte el orden visual */
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+}
+
+/* -------------------------------------
+   Decoración circular superior izquierda
+------------------------------------- */
+.circle-decore {
+    position: absolute;
+    top:150px;
+    left:300px;
+    width: 100px;
+    height: 100px;
+}
+
+.circle-decore img {
+    width: 100%;
+    height: auto;
+}
+
+/* -------------------------------------
+   Contenedor del texto (izquierda)
+------------------------------------- */
+.text-content {
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+    width: 100%;           /* ✅ Ocupa todo el ancho disponible */
+    max-width:none;
+    z-index:2;
+}
+
+/* Título */
+.title h1 {
+    font-family: 'Abril Fatface', serif;
+    font-size:80px;
+    line-height: 1.1;
+    color: #000;
+    margin-left:200px;  /* ✅ Agregar */
+    margin-top:40px ;
+}
+
+/* Descripción */
+.description h3 {
+    margin: 0;
+    font-size:20px;
+    font-weight:200;
+    color: #333;
+    line-height: 1.4;
+    margin-left:208px;  /* ✅ Agregar */
+    margin-top:-60px;
+}    
+
+/* Botón */
+.btn button {
+    background-color: #000;
+    color: #fff;
+    padding: 18px 40px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    margin-left:200px;  /* ✅ Agregar */
+    width: fit-content;
+}
+
+
+
+/* -------------------------------------
+   Imagen de la persona (derecha)
+------------------------------------- */
+.persona {
+    position: absolute;
+    right:180px;  /* 💡 antes era right */
+    bottom: 0;
+    height: 100%;
+    z-index: 1;
+}
+
+.persona img {
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
