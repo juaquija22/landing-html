@@ -17,7 +17,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;  
     align-items: center;
-    background-color: #a8160e;
+        background:linear-gradient(to bottom, #9C2004, #AB2706);
     padding: 50px;
     height: 100vh;
     color: white;

@@ -127,7 +127,7 @@ body {
 
 /* Imagen estructura (centro) */
 .image-structure {
-    margin-top: 120px;
+  margin-top: 120px;
   grid-column: 3 / 4;
   grid-row: 1 / 3;
   align-self: center;
@@ -147,7 +147,7 @@ body {
 
 /* Imagen escultura azul (derecha arriba) */
 .image-sculpture {
-    margin-top: 120px;
+  margin-top: 120px;
   grid-column: 4 / 5;
   grid-row: 1 / 2;
   align-self: start;
@@ -203,3 +203,106 @@ body {
   width: 230px;
 }
 
+/* =============================
+   RESPONSIVIDAD
+============================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .main-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto auto;
+  }
+
+  .text-block {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .testimonial {
+    grid-column: 1 / 3;
+    grid-row: 4;
+    margin-top: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .testimonial p {
+    font-size: 1rem;
+  }
+
+  /* Imágenes reducidas */
+  .image-chair,
+  .image-structure,
+  .image-sculpture {
+    width: 220px;
+    height: 300px;
+    margin-top: 40px;
+  }
+
+  .image-chair img,
+  .image-structure img,
+  .image-sculpture img {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Decoraciones ocultas en tablet */
+  .deco-waves,
+  .deco-spring,
+  .deco-star-1,
+  .deco-star-2 {
+    display: none;
+  }
+}
+
+/* Móviles */
+@media (max-width: 600px) {
+  .main-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+
+  .text-block {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .text-block h1 {
+    font-size: 2rem;
+  }
+
+  .text-block p {
+    font-size: 1rem;
+  }
+
+  .testimonial {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .image-chair,
+  .image-structure,
+  .image-sculpture {
+    width: 100%;
+    height: auto;
+    justify-self: center;
+    align-self: center;
+    margin-top: 0;
+  }
+
+  .image-chair img,
+  .image-structure img,
+  .image-sculpture img {
+    width: 100%;
+    height: auto;
+  }
+}

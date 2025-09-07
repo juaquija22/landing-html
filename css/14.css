@@ -1,0 +1,235 @@
+/* =============================
+   RESET
+============================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #3c1e17;
+  background-color: #fff;
+  line-height: 1.6;
+  padding: 40px 20px;
+}
+
+/* =============================
+   HERO WRAPPER
+============================= */
+.hero-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  min-height: 850px; /* altura aumentada */
+}
+
+/* =============================
+   HERO LEFT
+============================= */
+.hero-left {
+  margin-top: 180px; /* se puede ajustar según el diseño */
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* espacio entre texto y stats */
+}
+
+/* =============================
+   HERO LEFT TOP (Texto + Botón)
+============================= */
+.hero-left-top {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-left-top h1 {
+  font-size: 3.8rem;
+  font-weight: 700;
+  color: #2c150f;
+}
+
+.hero-left-top p {
+  font-size: 1rem;
+  color: #444;
+  max-width: 400px;
+}
+
+.hero-left-top button {
+  background-color: #fdd96c;
+  color: #291915;
+  padding: 12px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: start;
+}
+
+.hero-left-top button:hover {
+  background-color: #fcd34b;
+}
+
+/* =============================
+   STATS
+============================= */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  background-color: #3d2925;
+  color: #fff;
+  padding: 30px 40px;
+  border-radius: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.stat-block {
+  text-align: center;
+  flex: 1;
+  min-width: 120px;
+}
+
+.stat-block h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.stat-block p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* =============================
+   HERO RIGHT (Imagen)
+============================= */
+.hero-right {
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-right img {
+  margin-top: -90px;
+  width: 100%;
+  max-width: 750px;
+  height: 800px;
+  display: block;
+  object-fit: cover;
+}
+
+/* =============================
+   RESPONSIVE
+============================= */
+
+/* Tablets (pantallas <= 1024px) */
+@media (max-width: 1024px) {
+  .hero-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: auto;
+  }
+
+  .hero-left {
+    margin-top: 80px;
+    align-items: center;
+  }
+
+  .hero-left-top h1 {
+    font-size: 3rem;
+  }
+
+  .hero-left-top p {
+    max-width: 90%;
+  }
+
+  .hero-left-top button {
+    align-self: center;
+  }
+
+  .stats {
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .hero-right img {
+    margin-top: 20px;
+    max-width: 600px;
+    height: auto;
+  }
+}
+
+/* Móviles grandes (pantallas <= 768px) */
+@media (max-width: 768px) {
+  .hero-left-top h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-left-top p {
+    font-size: 0.95rem;
+  }
+
+  .stat-block h2 {
+    font-size: 1.5rem;
+  }
+
+  .stat-block p {
+    font-size: 0.85rem;
+  }
+
+  .hero-right img {
+    max-width: 100%;
+  }
+}
+
+/* Móviles pequeños (pantallas <= 480px) */
+@media (max-width: 480px) {
+  body {
+    padding: 20px;
+  }
+
+  .hero-left-top h1 {
+    font-size: 2rem;
+  }
+
+  .hero-left-top p {
+    font-size: 0.9rem;
+  }
+
+  .hero-left-top button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .stat-block {
+    width: 100%;
+  }
+
+  .stat-block h2 {
+    font-size: 1.3rem;
+  }
+
+  .stat-block p {
+    font-size: 0.8rem;
+  }
+
+  .hero-right img {
+    max-height: 400px;
+  }
+}
