@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  box-shadow: none !important; /* eliminar sombras no deseadas */
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 60px;
+  background: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* evitar scroll horizontal */
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 60px);
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  width: 700px;
+  height: 900px;
+  background: url('/image/gris.png') center/cover no-repeat;
+  color: rgb(255, 255, 255);
+  padding: 168px 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  margin: 0;
+}
+
+.hero h1 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  margin-bottom: 20px;
+  max-width: 350px;
+  font-size: 25px;
+}
+
+.hero button {
+  background: white;
+  color: black;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  width: fit-content;
+  cursor: pointer;
+}
+
+/* TARJETAS DE ABAJO (02 y 03) */
+.info-boxes {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.box {
+  flex: 1;
+  height: 300px; /* ajusta según lo que necesites */
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  min-width: 0;
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* COLUMNA DERECHA */
+.right-column {
+  width: 80%;
+  height: 894px;
+  background: url('/image/hello.png') center/cover no-repeat;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ------------------------------ */
+/* 📱 RESPONSIVE DESIGN */
+/* ------------------------------ */
+
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-column {
+    width: 100%;
+    align-items: center;
+  }
+
+  .hero {
+    width: 100%;
+    height: auto;
+    padding: 40px 20px;
+    background-position: center;
+  }
+
+  .info-boxes {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .box {
+    max-width: 45%;
+    margin-bottom: 20px;
+  }
+
+  .right-column {
+    padding: 20px;
+  }
+
+  .right-image {
+    width: 60%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .hero button {
+    margin: 0 auto;
+  }
+
+  .box {
+    max-width: 90%;
+  }
+
+  .right-image {
+    width: 80%;
+    max-width: 200px;
+  }
+}

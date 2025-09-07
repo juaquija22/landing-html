@@ -5,62 +5,54 @@
   box-sizing: border-box;
 }
 
-/* Body */
+/* Fondo completamente amarillo */
 body {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 100vh;
-  background: url("../image/48.png") no-repeat center center;
-  background-size:90%;
-  
+  min-height: 100vh;
+  background:linear-gradient(to bottom #FBD542,#FAD13A);
   font-family: 'Arial', sans-serif;
-}
-
-/* Layout General */
-.wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
-  gap: 40px;
   padding: 40px;
 }
 
-/* IZQUIERDA */
-.izquierda {
-  flex: 1;
-  max-width: 320px;
+/* Layout general */
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+  max-width: 1400px;
 }
 
-.title h1 {
-  font-size: 3.5rem;
-  font-weight: bold;
-  line-height: 1.2;
+/* Panel izquierdo */
+.left-panel {
+  flex: 1;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.text-section h1 {
+  font-size: 3rem;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.digital-text {
+  font-size: 1rem;
   color: #111;
 }
 
-.digital-img {
-  width: 270px;
-  margin: 20px 0;
+.text-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 20px;
 }
 
-/* CENTRO */
-.center {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  text-align: center;
-  padding-top: 40px;
-  gap: 20px;
-}
-
-.center img {
-  width: 120px;
-  margin-top: 10px;
-}
-
-.center button {
+.get-started-button {
   background-color: black;
   color: white;
   padding: 14px 32px;
@@ -68,91 +60,115 @@ body {
   border-radius: 18px;
   font-size: 1rem;
   cursor: pointer;
-}
-
-/* DERECHA */
-.derecha {
-  flex: 1.2;
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.keyboard-img img {
-  width: 100%;
-  max-width: 480px;
-  margin-bottom: 30px;
-  align-self: flex-end;
-}
-
-.text-items {
-  width: 100%;
-}
-
-.item {
   margin-bottom: 20px;
 }
 
-.item h3 {
-  font-weight: bold;
-  font-size: 1rem;
-  margin-bottom: 4px;
-  color: #111;
+/* Imagen como contenido */
+.keyboard-img {
+  width: 100%;
+  max-width: 350px;
+  margin-top: 20px;
+  object-fit: cover;
 }
 
-.item .number {
-  color: #111;
+/* Panel derecho */
+.right-panel {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.magnet-icon {
+  width: 270px;
+  margin: 20px 0;
+}
+
+.info-list {
+  margin: 20px 0;
+  width: 100%;
+}
+
+.list-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.number {
+  font-weight: bold;
   font-size: 1.1rem;
-  font-weight: bold;
-  margin-right: 10px;
+  color: #111;
+  margin-right: 12px;
 }
 
-.item p {
+.item-content h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #111;
+}
+
+.item-content p {
   font-size: 0.9rem;
   color: #333;
   line-height: 1.4;
 }
 
-.number-card {
-  width: 300px;
-  margin-top: 30px;
-  align-self: flex-end;
+/* Estadísticas */
+.stats-container {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.stat-item {
+  font-weight: bold;
+  color: #111;
+}
+
+/* Imagen stylus */
+.stylus-img {
+  width: 100%;
+  max-width: 480px;
+  margin-top: 20px;
+}
+
+/* Iconos sociales */
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
 }
 
 /* Responsive */
 @media (max-width: 1000px) {
   body {
-    display: block;
     padding: 20px;
   }
 
-  .wrapper {
+  .container {
     flex-direction: column;
     align-items: center;
-    padding: 20px 0;
   }
 
-  .izquierda,
-  .center,
-  .derecha {
+  .left-panel,
+  .right-panel {
     max-width: 100%;
+    align-items: center;
     text-align: center;
-    align-items: center;
   }
 
-  .derecha {
-    align-items: center;
+  .stylus-img {
+    max-width: 90%;
   }
 
-  .keyboard-img img,
-  .number-card {
-    width: 100%;
-    max-width: 350px;
-    margin: 20px 0;
-  }
-
-  .text-items {
-    padding: 0 20px;
+  .keyboard-img {
+    max-width: 90%;
   }
 }

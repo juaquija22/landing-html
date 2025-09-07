@@ -1,0 +1,106 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base del documento */
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fondo con imagen */
+.background {
+  background: url('/image/emile-seguin-R9OueKOtGGU-unsplash 1.png') no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 1rem;
+}
+
+/* Contenedor del contenido */
+.content {
+  margin-top:20vh; /* Ajusta este valor para subir o bajar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+}
+
+/* Título */
+h1 {
+  font-size:60px;
+  font-weight: 700px; /* Quitamos negrita */
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+/* Párrafo */
+p {
+  font-size: 20px;
+  max-width: 100%;
+  margin-bottom: 2rem;
+  color: #000;
+  line-height: 1.5;
+}
+
+/* Botón */
+button {
+  background-color: #0a0a0a;
+  color: white;
+  padding: 0.7rem 2.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+/* Responsividad: celulares */
+@media (max-width: 600px) {
+  .content {
+    margin-top: 8vh;
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 0.7rem 0;
+  }
+}
+
+/* Responsividad: tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .content {
+    margin-top: 9vh;
+    max-width: 95%;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
