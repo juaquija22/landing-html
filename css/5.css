@@ -1,95 +1,103 @@
+/* 🔹 Reset básico */
 body {
-    font-family: Arial, sans-serif; 
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    padding-top: 60px; 
+  font-family: Arial, sans-serif; 
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  padding-top: 60px; 
 }
 
+/* 🔹 Contenedor principal */
 .container {
-    width: 90%; 
-    max-width: 1200px; 
-    margin: 0 auto;
+  width: 90%; 
+  max-width: 1200px; 
+  margin: 0 auto;
 }
 
+/* 🔹 Título */
 .main-title {
-    font-size: clamp(2rem, 6vw, 4em); /* Escalable */
-    font-weight: bold;
-    color: #222;
-    margin-bottom: 60px;
-    line-height: 1.1;
-    letter-spacing: -1px;
-    text-align: center; /* centrado para móviles */
+  font-size: clamp(2rem, 6vw, 4em); /* Escalable */
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 60px;
+  line-height: 1.1;
+  letter-spacing: -1px;
 }
 
+/* 🔹 Grid de proyectos */
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 30px; 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px; 
 }
 
+/* 🔹 Ítem de proyecto */
 .project-item {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Número del proyecto */
 .project-number {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #555;
-    margin-bottom: 15px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 15px;
 }
 
+/* Descripción */
 .project-description {
-    font-size: 1em;
-    line-height: 1.6;
-    color: #666;
-    margin-bottom: 25px; 
+  font-size: 1em;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 25px; 
 }
 
+/* Imagen */
 .project-image {
-    width: 100%;
-    height: auto;
-    display: block; 
-    border-radius: 8px; 
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  display: block; 
+  border-radius: 8px; 
+  object-fit: cover;
 }
 
-/* Responsividad */
+/* 🔹 Responsividad - tablets */
 @media (max-width: 992px) {
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
-        gap: 20px;
-    }
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
 
-    .main-title {
-        margin-bottom: 40px;
-    }
+  .main-title {
+    margin-bottom: 40px;
+  }
 }
 
+/* 🔹 Responsividad - móviles */
 @media (max-width: 600px) {
-    body {
-        padding-top: 40px;
-    }
+  body {
+    padding-top: 40px;
+  }
 
-    .projects-grid {
-        grid-template-columns: 1fr; /* 1 columna en móviles */
-        gap: 15px;
-    }
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
 
-    .main-title {
-        font-size: 1.8rem;
-        margin-bottom: 30px;
-    }
+  .main-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
 
-    .project-number {
-        font-size: 1.2em;
-    }
+  .project-number {
+    font-size: 1.2em;
+  }
 
-    .project-description {
-        font-size: 0.95em;
-    }
+  .project-description {
+    font-size: 0.95em;
+  }
 }

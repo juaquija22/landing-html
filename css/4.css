@@ -1,25 +1,25 @@
-/* Reset básico */
+/* 🔹 Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
+/* 🔹 Body */
 body {
   font-family: Avenir, sans-serif;
   background: #f2f2f2;
   color: #000;
 }
 
-/* Contenedor principal (dos columnas) */
+/* 🔹 Layout principal (dos columnas) */
 section {
   display: flex;
   width: 100vw;
   height: 100vh;
 }
 
-/* Lado de la imagen */
+/* 🔹 Columna izquierda - Imagen */
 .image-side {
   flex: 1;
   height: 100%;
@@ -32,7 +32,7 @@ section {
   display: block;
 }
 
-/* Columna de contenido */
+/* 🔹 Columna derecha - Contenido */
 .content {
   flex: 1;
   background: white;
@@ -44,7 +44,7 @@ section {
   padding: 40px;
 }
 
-/* Texto principal */
+/* 🔹 Texto principal */
 .text-block {
   display: flex;
   flex-direction: column;
@@ -72,14 +72,13 @@ section {
   border-radius: 8px;
   width: fit-content;
   cursor: pointer;
-  transition: background 0.3s ease;
 }
 
 .text-block button:hover {
   background: #444;
 }
 
-/* Bloques numerados */
+/* 🔹 Bloques numerados */
 .number-blocks {
   display: flex;
   flex-direction: column;
@@ -98,7 +97,7 @@ section {
   color: #555;
 }
 
-/* Responsividad */
+/* 🔹 Responsividad */
 @media (max-width: 992px) {
   section {
     flex-direction: column;

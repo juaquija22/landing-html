@@ -1,3 +1,6 @@
+/* ------------------ */
+/* Contenedor principal */
+/* ------------------ */
 .item {
     display: grid;
     grid-template-columns: 1fr;
@@ -11,24 +14,32 @@
     justify-items: center;
     padding-bottom: 32px;
 }
-.item h1{
+
+/* ------------------ */
+/* Tipografías y textos */
+/* ------------------ */
+.item h1 {
     font-family: Avenir, sans-serif;
     font-size: 56px;
     color: #252525;
 }
-.item h2{
+.item h2 {
     font-family: Avenir, sans-serif;
     font-size: 40px;
     color: #252525;
     opacity: 25%;
 }
-.item p{
+.item p {
     font-family: Avenir, sans-serif;
     font-size: 26px;
     color: #252525;
     opacity: 80%;
 }
-.item button{
+
+/* ------------------ */
+/* Botón */
+/* ------------------ */
+.item button {
     background-color: #252525;
     color: white;
     font-family: Avenir, sans-serif;
@@ -38,53 +49,137 @@
     width: 100%;
     height: 100%;
     border-radius: 16px;
-
+    cursor: pointer;
 }
 
+/* ------------------ */
+/* Sección superior */
+/* ------------------ */
 .sup {
     display: flex;
     height: 100%;
     gap: 18px;
-
 }
 .sup :nth-child(1) {
     align-self: center;
 }
-
 .sup :nth-child(2) {
     align-self: flex-start;
 }
 .sup :nth-child(3) {
     align-self: flex-end;
 }
-
-.content{
+.content {
     width: 100%;
     height: 100%;
     max-width: 408px;
     max-height: 480px;
 }
-
 .img1 {
     width: 100%;
     height: 100%;
     max-width: 408px;
     max-height: 480px;
+    object-fit: cover;
+    border-radius: 12px;
 }
 
-.inf{
+/* ------------------ */
+/* Sección inferior */
+/* ------------------ */
+.inf {
+    display: flex;
     gap: 18px;
 }
-
 .img2 {
     width: 100%;
     height: 100%;
     max-width: 412px;
     max-height: 381px;
-    
+    object-fit: cover;
+    border-radius: 12px;
 }
 
+/* ------------------ */
+/* Responsive Design */
+/* ------------------ */
 
-.inf {
-    display: flex;
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    .item {
+        grid-template-rows: auto auto;
+        margin-top: 30px;
+        padding: 0 16px;
+    }
+
+    .sup {
+        flex-direction: column; /* Texto encima y luego imágenes */
+        align-items: center;
+    }
+
+    .item h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .item p {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .item button {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .inf {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img1, .img2 {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    .item h1 {
+        font-size: 42px;
+    }
+
+    .item p {
+        font-size: 20px;
+    }
+
+    .sup {
+        gap: 12px;
+    }
+
+    .inf {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        flex: 1 1 45%; /* dos columnas en tablets */
+        max-width: 45%;
+    }
+}
+
+/* Escritorios grandes */
+@media (min-width: 1024px) {
+    .item {
+        max-width: 1200px;
+    }
+
+    .sup {
+        gap: 24px;
+    }
+
+    .inf {
+        gap: 24px;
+    }
 }

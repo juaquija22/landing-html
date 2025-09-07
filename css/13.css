@@ -1,4 +1,15 @@
 /* =============================
+   BASE DEL BODY
+============================= */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+/* =============================
    WRAPPER GENERAL
 ============================= */
 .wrapper {
@@ -12,17 +23,6 @@
   overflow: hidden;
   padding: 40px 0;
   box-sizing: border-box;
-}
-
-/* =============================
-   BASE DEL BODY
-============================= */
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #333;
-  background-color: #fff;
-  overflow-x: hidden;
 }
 
 /* =============================
@@ -43,7 +43,6 @@ body {
   top: 290px;
   left: 430px;
   width: 150px;
-  z-index: 9999;
 }
 
 .floating-icons .decor1-left {
@@ -51,7 +50,6 @@ body {
   top: 300px;
   left: 600px;
   width: 200px;
-  z-index: 9999;
 }
 
 .floating-icons .sparkle-right {
@@ -59,7 +57,6 @@ body {
   top: 520px;
   right: 630px;
   width: 180px;
-  z-index: 9999;
 }
 
 .floating-icons .sunburst-right {
@@ -67,11 +64,10 @@ body {
   top: 620px;
   right: 440px;
   width: 120px;
-  z-index: 9999;
 }
 
 /* =============================
-   CONTENEDOR GENERAL
+   CONTENEDOR PRINCIPAL
 ============================= */
 .container {
   display: flex;
@@ -217,7 +213,7 @@ body {
 }
 
 /* =============================
-   IMÁGENES DE PERSONAS (Separadas)
+   IMÁGENES DE PERSONAS
 ============================= */
 .image-block img {
   width: 100%;
@@ -240,7 +236,7 @@ body {
 }
 
 /* =============================
-   RESPONSIVE
+   RESPONSIVIDAD
 ============================= */
 @media (max-width: 1024px) {
   .wrapper {
@@ -283,6 +279,7 @@ body {
     max-width: 250px;
   }
 
+  /* decoraciones más pequeñas */
   .floating-icons .star-left {
     top: 60px;
     left: 30px;
@@ -332,6 +329,7 @@ body {
 
   .image-block img {
     max-width: 200px;
+    height: auto;
   }
 
   .center button {

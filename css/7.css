@@ -1,3 +1,4 @@
+/* ====== Estilos Globales ====== */
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
@@ -24,6 +25,7 @@ h1 {
     max-width: 700px;
 }
 
+/* ====== Sección de Tarjetas ====== */
 .cards-section {
     display: flex;
     justify-content: space-between;
@@ -53,6 +55,7 @@ h1 {
     line-height: 1.5;
 }
 
+/* ====== Imagen con Overlay ====== */
 .image-card {
     position: relative;
     border-radius: 15px;
@@ -94,7 +97,7 @@ h1 {
     line-height: 1.4;
 }
 
-/* Responsividad */
+/* ====== Responsividad ====== */
 
 /* Tablets (2 columnas) */
 @media (max-width: 992px) {

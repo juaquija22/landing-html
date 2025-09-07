@@ -23,26 +23,24 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  align-items: center; /* centra verticalmente */
   gap: 40px;
   flex-wrap: wrap;
-  min-height: 850px; /* altura aumentada */
+  min-height: 850px;
 }
 
 /* =============================
    HERO LEFT
 ============================= */
 .hero-left {
-  margin-top: 180px; /* se puede ajustar según el diseño */
   flex: 1;
   min-width: 320px;
   display: flex;
   flex-direction: column;
-  gap: 40px; /* espacio entre texto y stats */
+  gap: 40px;
 }
 
-/* =============================
-   HERO LEFT TOP (Texto + Botón)
-============================= */
+/* Texto + Botón */
 .hero-left-top {
   display: flex;
   flex-direction: column;
@@ -119,10 +117,9 @@ body {
 }
 
 .hero-right img {
-  margin-top: -90px;
   width: 100%;
   max-width: 750px;
-  height: 800px;
+  height: auto; /* evita deformar */
   display: block;
   object-fit: cover;
 }
@@ -131,17 +128,15 @@ body {
    RESPONSIVE
 ============================= */
 
-/* Tablets (pantallas <= 1024px) */
+/* Tablets (<= 1024px) */
 @media (max-width: 1024px) {
   .hero-wrapper {
     flex-direction: column;
-    align-items: center;
     text-align: center;
     min-height: auto;
   }
 
   .hero-left {
-    margin-top: 80px;
     align-items: center;
   }
 
@@ -163,13 +158,11 @@ body {
   }
 
   .hero-right img {
-    margin-top: 20px;
     max-width: 600px;
-    height: auto;
   }
 }
 
-/* Móviles grandes (pantallas <= 768px) */
+/* Móviles grandes (<= 768px) */
 @media (max-width: 768px) {
   .hero-left-top h1 {
     font-size: 2.5rem;
@@ -186,13 +179,9 @@ body {
   .stat-block p {
     font-size: 0.85rem;
   }
-
-  .hero-right img {
-    max-width: 100%;
-  }
 }
 
-/* Móviles pequeños (pantallas <= 480px) */
+/* Móviles pequeños (<= 480px) */
 @media (max-width: 480px) {
   body {
     padding: 20px;
@@ -215,10 +204,6 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 15px;
-  }
-
-  .stat-block {
-    width: 100%;
   }
 
   .stat-block h2 {
