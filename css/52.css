@@ -20,6 +20,7 @@ body {
   flex: 1;
   padding-right: 40px;
   margin-left:70px ;
+  
 }
 
 .right {
@@ -45,6 +46,12 @@ body {
   margin-bottom: 24px;
   color: #444;
   margin-left:90px ;
+  max-width: 100%;          /* Que no se pase del ancho del contenedor */
+  overflow-wrap: break-word; /* Para que las palabras largas se quiebren */
+  word-wrap: break-word;     /* Compatibilidad */
+  hyphens: auto;             /* Opcional: para dividir palabras con guiones */
+  box-sizing: border-box;    /* Que incluya padding y border en el ancho */
+  padding: 0 10px;           /* Un poco de padding para que no quede pegado */
 }
 
 .btn {
@@ -78,7 +85,6 @@ body {
   font-weight: 700;
   color: transparent;
   -webkit-text-stroke: 1px #000;
-  text-stroke: 1px #000;
   margin: 0 6px;
 }
 
@@ -246,5 +252,26 @@ body {
 
   .hero {
     padding: 30px 15px;
+  }
+}
+@media (max-width: 1200px) {
+  .description {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 600px) {
+  .description {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    padding: 0 10px;
+    box-sizing: border-box;
   }
 }
