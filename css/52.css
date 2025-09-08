@@ -144,3 +144,107 @@ body {
   width:350px;
   border-radius: 16px;
 }
+/* Responsive respetando tamaños máximos */
+
+@media (max-width: 1200px) {
+  .hero {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .left, .right {
+    flex: unset;
+    margin-left: 0;
+    padding-right: 0;
+  }
+
+  .right {
+    margin-top: 40px;
+    margin-left: 0;
+    gap: 30px;
+  }
+
+  .hero-img {
+    width: 100%;
+    max-width: 560px; /* Máximo tamaño que ya tienes */
+    margin: 0 auto -50px auto;
+    display: block;
+  }
+
+  .description, .btn {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .btn {
+    padding: 15px 40px;
+    font-size: 14px;
+  }
+
+  .title {
+    position: static; /* Elimina absolute para que no se salga en móvil */
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .stats-card {
+    width: 100%;
+    max-width: 740px; /* Máximo tamaño */
+    margin: 60px auto 0 auto;
+    padding: 60px 20px;
+    margin-left: 0;
+  }
+
+  .circle-decor {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    top: -40px;
+  }
+
+  .stats h2 {
+    font-size: 28px;
+  }
+
+  .stats p {
+    font-size: 18px;
+  }
+
+  .bottom-images {
+    justify-content: center;
+    margin-left: 0;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .bottom-images img {
+    width: 100%;
+    max-width: 350px; /* Tamaño máximo */
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .btn {
+    padding: 12px 30px;
+    font-size: 13px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .stats h2 {
+    font-size: 24px;
+  }
+
+  .stats p {
+    font-size: 16px;
+  }
+
+  .hero {
+    padding: 30px 15px;
+  }
+}

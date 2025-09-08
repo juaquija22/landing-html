@@ -1,0 +1,172 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BASE */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 60px;
+  background-image: url(/image/44\ \(1\).png);
+}
+
+/* MAIN CONTENT */
+.content {
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* LEFT SECTION */
+.left-section {
+  max-width: 900px;
+  margin-top: 30px;
+  margin-left: 6px;
+}
+
+.titulo h1 {
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: white;
+}
+
+.description p {
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: white;
+  margin-left: 9px;
+}
+
+.btn {
+  background-color: white;
+  color: black;
+  padding: 17px 50px;
+  border: none;
+  border-radius: 999px;
+  font-size: 17px;
+}
+
+/* CARD SECTION */
+.card-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 90px;
+}
+
+.card {
+  background: linear-gradient(to bottom, #8c8c8c, #202020);
+  border-radius: 20px;
+  width: 250px;
+  height: 250px;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.card span {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.card p {
+  font-size: 15px;
+  line-height: 1.4;
+  color: #ccc;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+/* ------------------- MEDIA QUERIES ------------------- */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 1068px) {
+  .content {
+    padding: 60px 30px;
+    gap: 40px;
+  }
+
+  .titulo h1 {
+    font-size: 45px;
+    text-align: center;
+  }
+
+  .description p {
+    font-size: 20px;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .left-section {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 14px 40px;
+  }
+
+  .card-section {
+    gap: 20px;
+    margin-top: 60px;
+  }
+
+  .card {
+    width: 45%;
+    height: auto;
+    min-height: 220px;
+  }
+}
+
+/* Móviles */
+@media (max-width: 600px) {
+  .content {
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .titulo h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .description p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .btn {
+    font-size: 15px;
+    padding: 12px 30px;
+  }
+
+  .card-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 300px;
+  }
+}

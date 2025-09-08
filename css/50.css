@@ -1,195 +1,240 @@
-/* Reset básico */
-* {
-  margin: 0;
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+html,
+body {
+  margin-bottom: 20px;
   padding: 0;
-  box-sizing: border-box;
+  min-height: 100%;
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: url("/image/unsplash_3Om4DHcaAc0.png") no-repeat center center fixed;
-  background-size: cover; /* Hace que la imagen cubra todo */
-  min-height: 100vh;      /* Que ocupe al menos toda la pantalla */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
+  background: linear-gradient(to bottom, #bfdae6 0%, #f7c067 100%) no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-/* Sección principal */
-.design-section {
-  padding: 60px 40px;
-  border-radius: 12px;
-  max-width: 1200px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Encabezado */
-.header h1 {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #222;
-  line-height: 1.4;
-}
-
-.header p {
-  font-size: 16px;
-  color: #444;
-  max-width: 700px;
-  margin: 0 auto 30px auto;
-  line-height: 1.6;
-}
-
-.header button {
-  background-color: #222;
-  color: white;
-  border: none;
-  padding: 14px 32px;
-  font-size: 16px;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.header button:hover {
-  background-color: #444;
-}
-
-/* Grid de tarjetas */
-.grid {
-  margin-top: 60px;
+.layout-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 80px);
-  gap: 20px;
-
-  grid-template-areas: 
-    "card1 card2 card3 card4"
-    "card5 card5 card3 card6"
-    "card5 card5 card3 card6";
+  grid-template-rows: 0.8fr 1.2fr;
+  padding: 64px;
 }
-.card1 { grid-area: card1; }
-.card2 { grid-area: card2; }
-.card3 { grid-area: card3; }
-.card4 { grid-area: card4; }
-.card5 { grid-area: card5; }
-.card6 { grid-area: card6; }
 
-/* Estilo general para tarjetas */
-.card {
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 810px;
+  margin-top: 40px;
+}
+
+.main-heading {
+  font-family: "Lato", sans-serif;
+  font-size: 56px;
+  color: #333333;
+  text-align: center;
+  margin: 0;
+}
+
+.description-text {
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  margin: 35px;
+}
+
+.cta-button {
+  font-family: "Lato", sans-serif;
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 50px;
+  background-color: #333333;
+  color: #fff;
+  font-size: 18px;
+  font-weight: medium;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #fff;
+  color: #333333;
+}
+
+.gallery-section {
+  margin-top: 60px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 0.6fr 0.6fr 1.2fr 0.8fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "img1 img2 img3 img4"
+    "img5 img5 img3 img6";
+  gap: 16px;
+}
+
+.image-box:nth-child(1) {
+  grid-area: img1;
+}
+.image-box:nth-child(2) {
+  grid-area: img2;
+}
+.image-box:nth-child(3) {
+  grid-area: img3;
+}
+.image-box:nth-child(4) {
+  grid-area: img4;
+}
+.image-box:nth-child(5) {
+  grid-area: img5;
+}
+.image-box:nth-child(6) {
+  grid-area: img6;
+}
+
+.image-box {
   position: relative;
-  border-radius: 20px;
+  border-radius: 12px;
   overflow: hidden;
-  text-align: left;
 }
 
-.card img {
+.image-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  border-radius: 12px;
 }
 
-/* Texto sobre imágenes */
-.card p {
+.overlay-effect::before {
+  content: "";
   position: absolute;
-  bottom: 12px;
-  left: 12px;
-  right: 12px;
-  font-size: 14px;
-  color: #fff;
-  z-index: 1; /* para quedar encima del degradado */
-}
-
-/* Tarjeta más alta */
-.card.large {
-  grid-row: span 2;
-}
-
-/* Tarjeta más ancha */
-.card.wide {
-  grid-column: span 2;
-}
-.card.large1 {
-  grid-row: span 2;   /* ocupa 2 filas de alto */
-}
-
-.card.wide1 {
-  grid-column: span 2 ; /* ocupa 2 columnas de ancho */
-}
-
-/* Título superpuesto */
-.card-title {
-  position: absolute;
-  top: 16px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #353535af;
-  padding: 2px 9px;
-  border-radius: 6px;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.82) 100%
+  );
   z-index: 1;
 }
 
-.title1{
-    margin-left:162px ;
+.image-title {
+  position: absolute;
+  top: 0px;
+  right: 30px;
+  font-family: "Lato", sans-serif;
+  font-size: 32px;
+  text-align: center;
+  z-index: 2;
+  color: #333333;
 }
 
-/* --------------------- */
-/* Degradados por tarjeta */
-/* --------------------- */
-
-.card1::after {
-  content: "";
+.caption-text {
   position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 40%;
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.7), transparent);
-  pointer-events: none;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  z-index: 2;
+  color: #181818;
 }
 
-.card2::after {
-  content: "";
+.image-title-alt {
   position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 60%;
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.7), transparent);
-  pointer-events: none;
+  top: 0;
+  left: 20px;
+  font-family: "Lato", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #333333;
+  z-index: 2;
 }
 
-.card3::after {
-  content: "";
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 80%;
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.4), transparent);
-  pointer-events: none;
+.image-sm,
+.image-md,
+.image-lg,
+.image-xl {
+  /* All images share same styles */
 }
 
-.card4::after {
-  content: "";
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 50%;
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.4), transparent);
-  pointer-events: none;
+@media (min-width: 1400px) {
+  .image-grid {
+    grid-template-columns: 0.6fr 0.6fr 1.2fr 0.8fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "img1 img2 img3 img4"
+      "img5 img5 img3 img6";
+    gap: 16px;
+  }
+
+  .image-box {
+    min-height: 320px;
+  }
 }
 
-.card5::after {
-  content: "";
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 100%;
- 
-  pointer-events: none;
+@media (max-width: 1068px) {
+  .layout-grid {
+    height: 100vh;
+  }
+
+  .main-heading {
+    font-size: 38px;
+  }
+
+  .description-text {
+    font-size: 18px;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "img1 img2"
+      "img3 img3"
+      "img4 img6"
+      "img5 img5";
+    gap: 14px;
+  }
+
+  .image-box {
+    min-height: 240px;
+  }
 }
 
-.card6::after {
-  content: "";
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 70%;
- 
-  pointer-events: none;
+@media (max-width: 600px) {
+  .layout-grid {
+    padding: 16px;
+  }
+
+  .main-heading {
+    font-size: 26px;
+  }
+
+  .description-text {
+    font-size: 15px;
+    margin: 16px 0;
+  }
+
+  .cta-button {
+    width: 110px;
+    height: 38px;
+    font-size: 15px;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "img1"
+      "img2"
+      "img3"
+  }
 }

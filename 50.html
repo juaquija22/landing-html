@@ -1,52 +1,65 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Modern Grid Design</title>
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/50.css" />
-</head>
-<body>
-  <section class="design-section">
-    <!-- Encabezado -->
-    <div class="header">
-      <h1>We deliver beautiful and<br>reliable designs you need</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus imperdiet sed id <br> elementum. Quam vel aliquam sit vulputate. Faucibus nec gravida ipsum pulvinar vel.</p>
-      <button>Get started</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/50.css" />
+    <title>diseño 50</title>
+  </head>
+  <body>
+    <div class="layout-grid">
+      <div class="hero-section">
+        <div class="text-content">
+          <h1 class="main-heading">
+            We deliver beautiful and reliable designs you need
+          </h1>
+          <p class="description-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus
+            imperdiet sed id elementum. Quam vel aliquam sit vulputate. Faucibus
+            nec gravida ipsum pulvinar vel.
+          </p>
+          <button class="cta-button">Get Started</button>
+        </div>
+      </div>
+      <div class="gallery-section">
+        <div class="image-grid">
+          <div class="image-box overlay-effect">
+            <img src="image/Rectangle 82.png" alt="" class="image-sm" />
+            <p class="caption-text">
+              Lorem ipsum dolor sit amet, consectetur elit.
+            </p>
+          </div>
+          <div class="image-box overlay-effect">
+            <img src="image/Rectangle 83.png" alt="" class="image-sm" />
+            <p class="caption-text">
+              Lorem ipsum dolor sit amet, consectetur elit.
+            </p>
+          </div>
+          <div class="image-box">
+            <img src="image/Rectangle 85.png" alt="" class="image-lg" />
+            <h2 class="image-title">Title 1</h2>
+          </div>
+          <div class="image-box overlay-effect">
+            <img src="image/Rectangle 86.png" alt="" class="image-md" />
+            <p class="caption-text">
+              Lorem ipsum dolor sit amet, consectetur elit.
+            </p>
+          </div>
+          <div class="image-box">
+            <img src="image/Rectangle 84.png" alt="" class="image-xl" />
+            <h2 class="image-title-alt">Title 2</h2>
+          </div>
+          <div class="image-box overlay-effect">
+            <img src="image/Rectangle 85 (1).png" alt="" class="image-md" />
+            <p class="caption-text">
+              Lorem ipsum dolor sit amet, consectetur elit.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <!-- Grid de tarjetas -->
-    <div class="card card1">
-   <img src="image/Rectangle 82.png" alt="">
-   <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
-   </div>
-
- <div class="card card2">
-  <img src="image/Rectangle 83.png" alt="Image 2">
-  <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
- </div>
-
- <div class="card card3">
-  <img src="image/Rectangle 85.png" alt="Image 3">
-  <div class="card-title title1">Title 1</div>
- </div>
-
- <div class="card card4">
-  <img src="image/Rectangle 86.png" alt="Image 4">
-  <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
- </div>
-
-<div class="card card5">
-  <img src="image/Rectangle 84.png" alt="Image 5">
-  <div class="card-title">Title 2</div>
-</div>
-
- <div class="card card6">
-  <img src="image/Rectangle 85 (1).png" alt="Image 6">
-  <p>Lorem ipsum dolor sit amet, consectetur elit.</p>
- </div>
-    </div>
-  </section>
-</body>
+  </body>
 </html>

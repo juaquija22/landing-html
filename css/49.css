@@ -99,5 +99,100 @@ body {
     object-fit: cover;
     display: block;
 }
+/* -------------------------------------
+   RESPONSIVE DESIGN
+------------------------------------- */
+
+/* Tablets (hasta 991px) */
+@media (max-width: 991px) {
+  body {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px 40px;
+    overflow: auto; /* permitir scroll si es necesario */
+    height: auto;
+  }
+
+  .circle-decore {
+    top: 40px;
+    left: 40px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .text-content {
+    align-items: flex-start;
+    text-align: left;
+    margin-top: 40px;
+  }
+
+  .title h1 {
+    font-size: 48px;
+    margin-left: 0;
+  }
+
+  .description h3 {
+    font-size: 18px;
+    margin-left: 0;
+    margin-top: -20px;
+  }
+
+  .btn button {
+    margin-left: 0;
+    padding: 14px 28px;
+    font-size: 15px;
+  }
+
+  .persona {
+    position: relative;
+    right: 0;
+    height: auto;
+    width: 100%;
+    max-height: 400px;
+    margin-top: 40px;
+  }
+
+  .persona img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+/* Móviles (hasta 600px) */
+@media (max-width: 600px) {
+  body {
+    padding: 30px 20px;
+  }
+
+  .title h1 {
+    font-size: 36px;
+    margin-top: 20px;
+  }
+
+  .description h3 {
+    font-size: 16px;
+    margin-top: -10px;
+  }
+
+  .btn button {
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .circle-decore {
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .persona {
+    max-height: 300px;
+  }
+}
 
 

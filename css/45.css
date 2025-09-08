@@ -1,168 +1,207 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  box-shadow: none !important; /* eliminar sombras no deseadas */
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(4, 0.4fr);
+  grid-template-rows: repeat(3, 0.4fr);
+  grid-template-areas:
+    "hero hero card1 card1"
+    "hero hero card1 card1"
+    "card2 card3 card1 card1";
+  margin-top: 60px;
+  height: 100vh;
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding-top: 60px;
-  background: white;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* evitar scroll horizontal */
-}
-
-.container {
-  display: flex;
-  width: 100%;
-  height: calc(100vh - 60px);
-  border: none;
-  margin: 0;
-  padding: 0;
-}
-
-.left-column {
-  display: flex;
-  flex-direction: column;
-  border: none;
-  margin: 0;
-  padding: 0;
-}
-
-.hero {
-  width: 700px;
-  height: 900px;
-  background: url('/image/gris.png') center/cover no-repeat;
-  color: rgb(255, 255, 255);
-  padding: 168px 90px;
+.hero-section {
+  grid-area: hero;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: none;
-  margin: 0;
-}
-
-.hero h1 {
-  font-size: 60px;
-  font-weight: 700;
-  margin-bottom: 16px;
-}
-
-.hero p {
-  margin-bottom: 20px;
-  max-width: 350px;
-  font-size: 25px;
-}
-
-.hero button {
-  background: white;
-  color: black;
-  padding: 12px 30px;
-  border: none;
-  border-radius: 25px;
-  font-size: 1rem;
-  width: fit-content;
-  cursor: pointer;
-}
-
-/* TARJETAS DE ABAJO (02 y 03) */
-.info-boxes {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%;
-  max-width: none;
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
-}
-
-.box {
-  flex: 1;
-  height: 300px; /* ajusta según lo que necesites */
   position: relative;
   overflow: hidden;
-  cursor: pointer;
-  min-width: 0;
 }
 
-.box img {
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-1 {
+  grid-area: card1;
+}
+
+.card-2 {
+  grid-area: card2;
+}
+
+.card-3 {
+  grid-area: card3;
+}
+
+.hero-bg-img,
+.card-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-/* COLUMNA DERECHA */
-.right-column {
-  width: 80%;
-  height: 894px;
-  background: url('/image/hello.png') center/cover no-repeat;
+.hero-title {
+  position: absolute;
+  top: 13%;
+  left: 10%;
+  color: #fff;
+  font-family: "Bitter", serif;
+  font-size: 3.2rem;
+  font-weight: bolder;
+  max-width: 60%;
+}
+
+.hero-description {
+  position: absolute;
+  top: 47%;
+  left: 10%;
+  font-family: "Space Mono", monospace;
+  color: #fff;
+  max-width: 70%;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.cta-button {
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  background: #fff;
+  font-family: "Space Mono", monospace;
+  color: #000000;
   border: none;
-  margin: 0;
-  padding: 0;
+  padding: 12px 24px;
+  border-radius: 24px;
+  cursor: pointer;
 }
 
-/* ------------------------------ */
-/* 📱 RESPONSIVE DESIGN */
-/* ------------------------------ */
 
-@media (max-width: 1024px) {
-  .container {
-    flex-direction: column;
-    height: auto;
+
+
+
+
+@media screen and (min-width: 1440px) {
+  .grid-layout {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 400px);
   }
 
-  .left-column {
-    width: 100%;
-    align-items: center;
+  .hero-title {
+    font-size: 4rem;
   }
 
-  .hero {
-    width: 100%;
-    height: auto;
-    padding: 40px 20px;
-    background-position: center;
+  .hero-description {
+    font-size: 1.4rem;
   }
 
-  .info-boxes {
-    justify-content: center;
-    flex-wrap: wrap;
+  .card-number {
+    font-size: 4rem;
   }
 
-  .box {
-    max-width: 45%;
-    margin-bottom: 20px;
-  }
-
-  .right-column {
-    padding: 20px;
-  }
-
-  .right-image {
-    width: 60%;
-    max-width: 250px;
+  .card-text {
+    font-size: 1.2rem;
   }
 }
 
-@media (max-width: 600px) {
-  .hero h1 {
+@media screen and (max-width: 1068px) {
+  .grid-layout {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 300px);
+    grid-template-areas:
+      "hero hero"
+      "card1 card1"
+      "card2 card3";
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    max-width: 80%;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    max-width: 80%;
+  }
+
+  .card-number {
+    font-size: 2.5rem;
+  }
+
+  .card-text {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "hero"
+      "card1"
+      "card2"
+      "card3";
+  }
+
+  .hero-section {
+    min-height: 25vh;
+  }
+
+  .hero-title {
     font-size: 2rem;
-    text-align: center;
-  }
-
-  .hero button {
-    margin: 0 auto;
-  }
-
-  .box {
+    top: 8%;
+    left: 5%;
     max-width: 90%;
   }
 
-  .right-image {
-    width: 80%;
-    max-width: 200px;
+  .hero-description {
+    font-size: 1rem;
+    top: 40%;
+    left: 5%;
+    max-width: 90%;
+  }
+
+  .cta-button {
+    top: 65%;
+    left: 5%;
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 457px) {
+  .hero-title {
+    font-size: 1.6rem;
+    top: 6%;
+    left: 5%;
+    max-width: 90%;
+  }
+
+  .hero-description {
+    font-size: 0.85rem;
+    top: 38%;
+    left: 5%;
+    max-width: 90%;
+  }
+
+  .cta-button {
+    top: 75%;
+    left: 5%;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+  .card-number {
+    font-size: 1.8rem;
+  }
+
+  .card-text {
+    font-size: 0.75rem;
   }
 }

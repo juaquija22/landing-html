@@ -109,7 +109,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 20px;
+  
 }
 
 .card {
@@ -139,82 +139,84 @@ body {
   background-color: #e3e8f1;
 }
 
-/* ======= MEDIA QUERIES ======= */
+/* ========== RESPONSIVE DESIGN ========== */
 
-/* Tablets */
-@media (max-width: 1024px) {
+/* Tablets (hasta 991px) */
+@media (max-width: 991px) {
   .hero {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    gap: 40px;
   }
-  
-  .text-content {
-    max-width: 100%;
-  }
-  
-  .text-content h1 span {
-    transform: none;
-  }
-  
+
   .image-content {
     justify-content: center;
-    margin-top: 30px;
+    width: 100%;
   }
-  
+
   .circle-logo {
-    position: static;
-    margin-top: 20px;
+    top: -30px;
+    right: 10px;
+    width: 80px;
   }
-  
+
+  .text-content h1 {
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+
   .cta-button {
     margin-left: 0;
+    margin-top: 16px;
+    padding: 12px 28px;
   }
-}
 
-/* Smartphones medianos */
-@media (max-width: 768px) {
-  .text-content h1 {
-    font-size: 2.2rem;
-    line-height: 1.1;
-  }
-  
-  .description {
-    font-size: 0.95rem;
-  }
-  
   .cards {
     justify-content: center;
+    gap: 24px;
   }
-  
+
   .card {
     max-width: 100%;
-    flex-basis: 100%;
-  }
-  
-  .cta-button {
-    width: 100%;
-    margin-left: 0;
+    flex: 1 1 100%;
   }
 }
 
-/* Smartphones pequeños */
-@media (max-width: 480px) {
+/* Móviles (hasta 600px) */
+@media (max-width: 600px) {
   .page-wrapper {
     padding: 40px 20px;
     margin-top: 60px;
   }
-  
+
   .text-content h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    line-height: 1.1;
   }
-  
+
   .description {
-    padding-left: 12px;
+    font-size: 0.95rem;
+    padding-left: 16px;
   }
-  
+
   .cta-button {
-    font-size: 0.9rem;
-    padding: 12px;
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+  }
+
+  .circle-logo {
+    top: -20px;
+    right: 0;
+    width: 60px;
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card {
+    padding: 24px;
   }
 }
