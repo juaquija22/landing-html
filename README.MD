@@ -57,13 +57,7 @@ Este proyecto busca ser un **entrenamiento intensivo de maquetación web**, repl
 
 ---
 
-## 📷 Ejemplos de Landing Pages
 
-Ejemplos comunes de secciones:  
-- Hero con imagen destacada.  
-- Bloques de texto + imágenes alternados.  
-- Secciones de características o servicios.  
-- Testimonios y llamadas a la acción.  
-- Footer con enlaces y redes sociales.  
-
----
+## Autores
+-Juan Pablo Quijano Martinez
+-Valentina Mancilla Casanova
