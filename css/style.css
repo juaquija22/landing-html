@@ -1,52 +1,111 @@
+/* =========================
+   GLOBAL
+========================= */
 body {
   margin: 0;
-  background: linear-gradient(135deg, #03c4ff, #ff9292);
+  background: radial-gradient(circle at top left, #ff9a9e, #fad0c4 20%, #fbc2eb 40%, #a1c4fd 70%, #c2ffd8 100%);
   font-family: Arial, Helvetica, sans-serif;
+  color: #1f2937;
+  min-height: 100vh;
 }
 
-
-
+/* =========================
+   HEADER
+========================= */
 .header {
   text-align: center;
-  background: linear-gradient(135deg, #ff9292, #03c4ff);
-  color: #1e293b;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0px 4px 10px rgba(255, 234, 0, 0.2);
-  max-width: 800px;
-  margin: 20px auto;
-
-}
-.header :hover {
-  transform: scale(1.1); 
+  background: linear-gradient(135deg, #ffffff, #f8f9fa, #e9ecef); /* fondo neutro elegante */
+  color: #1f2937;
+  padding: 40px 20px;
+  border-radius: 18px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
+  max-width: 900px;
+  margin: 40px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.header:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 12px 28px rgba(0, 0, 0, 0.18);
+}
 
+.header h1 {
+  margin: 0;
+  font-size: 2.4rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff758c, #ff7eb3, #6a82fb, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
+.header p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #374151;
+}
+
+/* =========================
+   GALLERY
+========================= */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 15px;
-  padding: 20px;
-  max-width: 1200px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+  padding: 40px;
+  max-width: 1300px;
   margin: auto;
 }
 
 .gallery a {
   display: block;
-  border-radius: 12px;
-
+  border-radius: 18px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffffff, #fdfbfb, #f5f7fa);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery a:hover {
-  box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
-  transform: scale(1.1); 
+  transform: scale(1.08);
+  box-shadow: 0px 14px 24px rgba(0, 0, 0, 0.25);
 }
 
 .gallery img {
   width: 100%;
-  height: 100%;
+  height: 200px;
   object-fit: cover;
   display: block;
-  border-radius: 20px;
+  border-radius: 18px;
+  transition: transform 0.3s ease;
+}
+
+.gallery a:hover img {
+  transform: scale(1.06);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 1.8rem;
+  }
+  .gallery img {
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 25px 15px;
+  }
+  .header h1 {
+    font-size: 1.5rem;
+  }
+  .gallery {
+    gap: 14px;
+    padding: 20px;
+  }
+  .gallery img {
+    height: 130px;
+  }
 }
